@@ -1,21 +1,16 @@
-# Add StructureMap solution for dependency Injection (DI) and Inversion of control (IOC)(APIs and MVC5)
+# EPI Server Setup
+
+- Add StructureMap solution for dependency Injection (DI) and Inversion of control (IOC)(APIs and MVC5)
 [1.StructureMapDependencyResolver](#StructureMapDependencyResolver)
-
-[2.StructureMapScope](#StructureMapScope)
-
+[2.StructureMapScope](#StructureMapScope)  
 [3.DependencyResolverInitialization](#DependencyResolverInitialization)
 
-# EPI Server Setup
-- EPI Server Site Tabs Configuration
 
+- EPI Server Site Tabs Configuration  
 [1.Create SiteTabNames class](#SiteTabNames)
-
-- EPI Server Create basic media classes
-
-[1.Create GenericMedia class](#GenericMedia)
-
-[2.Create ImageFile class](#ImageFile)
-
+- EPI Server Create basic media classes  
+[1.Create GenericMedia class](#GenericMedia)  
+[2.Create ImageFile class](#ImageFile)  
 [3.Create VideoFile class](#VideoFile)
 
 <div id="StructureMapDependencyResolver">
