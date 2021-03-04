@@ -236,6 +236,7 @@
     <Compile Include="Business\SiteTabNames.cs" />
     <Compile Include="Business\StructureMapDependencyResolver.cs" />
     <Compile Include="Business\StructureMapScope.cs" />
+    <Compile Include="Controllers\AboutUsPageTypeController.cs" />
     <Compile Include="Controllers\StartPageTypeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -247,6 +248,7 @@
     <Compile Include="Models\Media\GenericMedia.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
     <Compile Include="Models\Media\VideoFile.cs" />
+    <Compile Include="Models\Pages\AboutUsPageType.cs" />
     <Compile Include="Models\Pages\Base\SitePageData.cs" />
     <Compile Include="Models\Pages\StartPageType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -272,6 +274,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\StartPageType\Index.cshtml" />
+    <Content Include="Views\AboutUsPageType\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
