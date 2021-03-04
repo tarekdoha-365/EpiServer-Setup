@@ -79,7 +79,7 @@ namespace EpiServer_Setup.Business
 }
 ```
 </div>
-- 
+
 [GoTop](#GoTop)
 <div id="StructureMapScope">
 <h3>StructureMapScope</h3>
@@ -166,7 +166,7 @@ namespace EpiServer_Setup.Infrastructure.Initialization
 }
 ```
 </div>
-- 
+
 [GoTop](#GoTop)
 </div>
 
@@ -206,7 +206,7 @@ namespace EpiServer_Setup.Business
 }
 ```
 </div>
-- 
+
 [GoTop](#GoTop)
 
 <div id="GenericMedia">
@@ -236,7 +236,7 @@ public virtual string Description { get; set; }
 }
 ```
 </div>
-- 
+ 
 [GoTop](#GoTop)
 <div id="ImageFile">
 2- Create ImageFile class:
@@ -273,7 +273,7 @@ public virtual string AlternativeText { get; set; }
 }
 ```
 </div>
-- 
+
 [GoTop](#GoTop)
 <div id="VideoFile">
 
@@ -308,7 +308,7 @@ public virtual ContentReference PreviewImage { get; set; }
 }
 ```
 </div>
-- 
+
 [GoTop](#GoTop)
 <div id="ICacheManager">
 ICacheManager
@@ -339,8 +339,9 @@ namespace EpiServer_Setup.Interfaces
 
 ```
 </div>
-- 
+
 [GoTop](#GoTop)
+
 <div id="CacheManager">
 CacheManager
 
@@ -434,5 +435,6 @@ namespace EpiServer_Setup.Business
 }
 ```
 </div>
-- 
+
+
 [GoTop](#GoTop)
