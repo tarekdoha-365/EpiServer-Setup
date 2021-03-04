@@ -1,3 +1,5 @@
+<div id="#GoTop">
+</div>
 # EPI Server Setup
 
 - Add StructureMap solution for dependency Injection (DI) and Inversion of control (IOC)(APIs and MVC5)  
@@ -77,6 +79,8 @@ namespace EpiServer_Setup.Business
 }
 ```
 </div>
+- 
+[GoTop](#GoTop)
 <div id="StructureMapScope">
 <h3>StructureMapScope</h3>
 
@@ -162,6 +166,8 @@ namespace EpiServer_Setup.Infrastructure.Initialization
 }
 ```
 </div>
+- 
+[GoTop](#GoTop)
 </div>
 
 <div id="SiteTabNames">
@@ -200,7 +206,8 @@ namespace EpiServer_Setup.Business
 }
 ```
 </div>
-
+- 
+[GoTop](#GoTop)
 
 <div id="GenericMedia">
 1- Create GenericMedia class:
@@ -229,6 +236,8 @@ public virtual string Description { get; set; }
 }
 ```
 </div>
+- 
+[GoTop](#GoTop)
 <div id="ImageFile">
 2- Create ImageFile class:
 in Infrastructure.Models.Media create ImageFile.cs and use this code:
@@ -264,6 +273,8 @@ public virtual string AlternativeText { get; set; }
 }
 ```
 </div>
+- 
+[GoTop](#GoTop)
 <div id="VideoFile">
 
 3- Create VideoFile class:
@@ -297,7 +308,8 @@ public virtual ContentReference PreviewImage { get; set; }
 }
 ```
 </div>
-
+- 
+[GoTop](#GoTop)
 <div id="ICacheManager">
 ICacheManager
 
@@ -327,6 +339,8 @@ namespace EpiServer_Setup.Interfaces
 
 ```
 </div>
+- 
+[GoTop](#GoTop)
 <div id="CacheManager">
 CacheManager
 
@@ -420,3 +434,5 @@ namespace EpiServer_Setup.Business
 }
 ```
 </div>
+- 
+[GoTop](#GoTop)
