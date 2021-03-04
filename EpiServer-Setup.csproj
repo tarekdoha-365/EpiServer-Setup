@@ -232,11 +232,16 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\CacheManager.cs" />
     <Compile Include="Business\SiteTabNames.cs" />
+    <Compile Include="Business\StructureMapDependencyResolver.cs" />
+    <Compile Include="Business\StructureMapScope.cs" />
     <Compile Include="Controllers\StartPageTypeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Initialization\DependencyResolverInitialization.cs" />
+    <Compile Include="Interfaces\ICacheManager.cs" />
     <Compile Include="MediaTypeHeaderValue.cs" />
     <Compile Include="Models\Blocks\Base\SiteBlockData.cs" />
     <Compile Include="Models\Media\GenericMedia.cs" />
@@ -247,7 +252,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Initialization\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Static\" />
   </ItemGroup>
