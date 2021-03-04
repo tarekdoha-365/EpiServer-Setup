@@ -1,6 +1,6 @@
-<div id="#GoTop">
+<div id="GoTop">
+<h1> EPI Server Setup</h1>
 </div>
-# EPI Server Setup
 
 - Add StructureMap solution for dependency Injection (DI) and Inversion of control (IOC)(APIs and MVC5)  
 [1. StructureMapDependencyResolver](#StructureMapDependencyResolver)                
