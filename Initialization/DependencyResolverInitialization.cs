@@ -22,7 +22,7 @@ namespace EpiServer_Setup.Infrastructure.Initialization
         {
             container.Scan(x =>
             {
-                x.Assembly("EpiServer_Setup");
+                x.Assembly("EpiServer-Setup");
                 x.WithDefaultConventions();
                 x.LookForRegistries();
             });
