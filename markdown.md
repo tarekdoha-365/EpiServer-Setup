@@ -17,7 +17,11 @@
 
 - Cache Manager Setup  
 [1. ICacheManager](#ICacheManager)            
-[2. CacheManager](#CacheManager)
+[2. CacheManager](#CacheManager)   
+
+- Editor Discriptor  
+[1. CustomCategoryListEditorDescriptor](#CustomCategoryListEditorDescriptor)   
+[2. HideCategoryEditorDescriptor](#HideCategoryEditorDescriptor)
 
 
 <div id="StructureMapDependencyResolver">
@@ -436,5 +440,88 @@ namespace EpiServer_Setup.Business
 ```
 </div>
 
+
+[GoTop](#GoTop)
+
+<div id="CustomCategoryListEditorDescriptor">
+
+```
+using EPiServer.Core;
+using EPiServer.Shell.ObjectEditing;
+using EPiServer.Shell.ObjectEditing.EditorDescriptors;
+using EpiServer_Setup.Attributes;
+using EpiServer_Setup.Constants;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace EpiServer_Setup.EditorDescriptors
+{
+    [EditorDescriptorRegistration(TargetType = typeof(CategoryList), UIHint = SiteUIHint.CustomCategories, EditorDescriptorBehavior = EditorDescriptorBehavior.ExtendBase)]
+    public class CustomCategoryListEditorDescriptor : EditorDescriptor
+    {
+        public override void ModifyMetadata(
+           ExtendedMetadata metadata,
+           IEnumerable<Attribute> attributes)
+        {
+
+            base.ModifyMetadata(metadata, attributes);
+            var categorySelectionAttribute =
+                attributes.OfType<CategorySelectionAttribute>().FirstOrDefault();
+
+            if (categorySelectionAttribute != null)
+            {
+                metadata.EditorConfiguration["root"] =
+                    categorySelectionAttribute.GetRootCategoryId();
+                return;
+            }
+
+            var contentTypeCategorySelectionAttribute =
+                metadata.ContainerType.GetCustomAttributes(true).FirstOrDefault() as CategorySelectionAttribute;
+
+            if (contentTypeCategorySelectionAttribute != null)
+            {
+                metadata.EditorConfiguration["root"] =
+                    contentTypeCategorySelectionAttribute.GetRootCategoryId();
+            }
+        }
+    }
+}
+```
+</div>
+
+[GoTop](#GoTop)
+
+<div id="HideCategoryEditorDescriptor">
+
+```
+using EPiServer.Core;
+using EPiServer.Shell.ObjectEditing;
+using EPiServer.Shell.ObjectEditing.EditorDescriptors;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace EpiServer_Setup.EditorDescriptors
+{
+    [EditorDescriptorRegistration(TargetType = typeof(CategoryList))]
+    public class HideCategoryEditorDescriptor : EditorDescriptor
+    {
+        public override void ModifyMetadata(
+           ExtendedMetadata metadata,
+           IEnumerable<Attribute> attributes)
+        {
+            base.ModifyMetadata(metadata, attributes);
+            if (metadata.PropertyName == "icategorizable_category")
+            {
+                metadata.ShowForEdit = false;
+            }
+        }
+    }
+}
+```
+</div>
 
 [GoTop](#GoTop)
